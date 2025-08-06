@@ -2,21 +2,6 @@
 
 This project demonstrates the use of advanced shell scripting techniques to automate API interactions, text processing, process management, and error handling using the Pokémon API.
 
-## 📁 Repository Structure
-
-ALXprodev-Devops/
-└── Advanced_shell/
-├── apiAutomation-0x00/
-│ └── fetch_pikachu.sh
-├── data_extraction_automation-0x01/
-│ └── parse_pikachu
-├── batchProcessing-0x02/
-│ └── fetch_multiple_pokemon
-├── summaryData-0x03/
-│ └── pokemon_report
-├── batchProcessing-0x04/
-│ └── parallel_fetch
-
 ## 📌 Tasks Overview
 
 ### 0️⃣ API Request Automation
