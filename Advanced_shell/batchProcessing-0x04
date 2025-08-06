@@ -7,7 +7,8 @@ error_log="errors_parallel.txt"
 mkdir -p "$output_dir"
 > "$error_log"
 
-# Function to fetch a single Pokémon
+declare -a pids=()
+
 fetch_pokemon() {
   local pokemon=$1
   local max_attempts=3
@@ -34,15 +35,27 @@ fetch_pokemon() {
 
 echo "Starting parallel fetch..."
 
-# Launch all fetches in background
+# Start all jobs in background, save PIDs
 for pokemon in "${pokemon_list[@]}"
 do
   echo "Fetching data for $pokemon..."
   fetch_pokemon "$pokemon" &
+  pids+=($!)
 done
 
-# Wait for all background jobs to finish
-wait
+# Wait for all jobs and demonstrate kill usage
+for pid in "${pids[@]}"; do
+  wait $pid
+  status=$?
+  if [[ $status -ne 0 ]]; then
+    echo "Process $pid failed, killing all other jobs..."
+    # Kill all running background jobs
+    for kill_pid in "${pids[@]}"; do
+      kill $kill_pid 2>/dev/null
+    done
+    break
+  fi
+done
 
 echo "All Pokémon data fetched."
 
