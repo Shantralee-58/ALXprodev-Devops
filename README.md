@@ -98,7 +98,7 @@ Make scripts executable
 
 chmod +x fetch_pikachu.sh parse_pikachu fetch_multiple_pokemon pokemon_report parallel_fetch
 
-**Run sample tasks**
+## Run sample tasks
 
 ./fetch_pikachu.sh
 ./parse_pikachu
@@ -106,11 +106,11 @@ chmod +x fetch_pikachu.sh parse_pikachu fetch_multiple_pokemon pokemon_report pa
 ./pokemon_report
 ./parallel_fetch
 
-✅ Author
+## ✅ Author
 Idah Lindiwe Khumalo
 📍 Johannesburg, South Africa
-🔗 LinkedIn
-🔗 GitHub
+🔗 LinkedIn https://www.linkedin.com/in/idahkhumalo
+🔗 GitHub   https://www.github.com/Shantralee-58
 
 📝 License
 This project is part of the ALX Software Engineering program curriculum. It is intended for educational purposes and follows best practices in shell scripting and automation.
